@@ -27,9 +27,9 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
 
     truth = pd.read_csv(truth_file)
     pred = pd.read_csv(submission_answer_file)
-    merged = truth.merge(pred, on='UWI', suffixes=('_true', '_pred'), how='left')
+    merged = truth.merge(pred, on='data_index', suffixes=('_true', '_pred'), how='left')
 	
-    result = np.mean(np.abs(merged['TrueTemp_true'].values-merged['TrueTemp_pred'].values))
+    result = np.mean(np.abs(merged['target_true'].values-merged['target_pred'].values))
 
     output_file.write("mae:"+str(result))
 
