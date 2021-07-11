@@ -18,7 +18,7 @@ phases:
     2:
         phasenumber: 2
         label: "View final leaderboard"
-        start_date: 2021-05-20
+        start_date: 2029-05-20
         max_submissions: 0
         scoring_program: scoring_program_tst.zip
         reference_data: reference_data_tst.zip
